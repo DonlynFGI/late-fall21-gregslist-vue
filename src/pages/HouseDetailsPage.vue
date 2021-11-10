@@ -1,8 +1,8 @@
 <template>
   <div class="house-details container-fluid">
     <div class="row mt-5">
-      <div class="col text-center">
-        <img :src="house.imgUrl" alt="" />
+      <div class="col text-center fixer">
+        <img class="fixer" :src="house.imgUrl" alt="" />
       </div>
       <div class="row mt-3 justify-content-center">
         <div class="col-md-8">
@@ -108,5 +108,8 @@ export default {
   & img {
     height: 50px;
   }
+}
+.fixer {
+  max-width: 500px;
 }
 </style>
