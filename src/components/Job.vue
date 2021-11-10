@@ -1,16 +1,16 @@
 <template>
   <div class="mt-3 selectable">
     <!-- Add Parameters to router link with the 'params' object -->
-    <router-link :to="{ name: 'CarDetails', params: { id: car.id } }">
+    <router-link :to="{ name: 'JobDetails', params: { id: job.id } }">
       <div class="bg-light elevation-1 rounded">
         <img
-          class="car-img rounded-top w-100 fixer"
-          :src="car.imgUrl"
-          alt="car image"
+          class="job-img rounded-top w-100"
+          :src="job.imgUrl"
+          alt="job image"
         />
         <div class="p-1 text-center">
           <p class="m-0">
-            <b>{{ car.make }} - {{ car.model }}</b>
+            <b>{{ job.hours }} - {{ job.title }}</b>
           </p>
           <!-- <div class="text-end">
           <span
@@ -34,7 +34,7 @@
 <script>
 export default {
   props: {
-    car: {
+    job: {
       type: Object,
       required: true,
     },
@@ -47,7 +47,4 @@ export default {
 
 
 <style lang="scss" scoped>
-.fixer {
-  max-width: 500px;
-}
 </style>

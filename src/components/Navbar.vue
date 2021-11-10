@@ -59,19 +59,19 @@
             Cars
           </router-link>
           <!-- FIXME change to Houses -->
-          <!-- <router-link
-            :to="{ name: 'About' }"
+          <router-link
+            :to="{ name: 'Houses' }"
             class="btn text-success lighten-30 selectable text-uppercase"
           >
             Houses
-          </router-link> -->
+          </router-link>
           <!-- FIXME change to Jobs -->
-          <!-- <router-link
-            :to="{ name: 'About' }"
+          <router-link
+            :to="{ name: 'Jobs' }"
             class="btn text-success lighten-30 selectable text-uppercase"
           >
             Jobs
-          </router-link> -->
+          </router-link>
         </li>
       </ul>
     </div>
@@ -79,22 +79,22 @@
 </template>
 
 <script>
-import { AuthService } from '../services/AuthService'
-import { AppState } from '../AppState'
-import { computed } from 'vue'
+import { AuthService } from "../services/AuthService";
+import { AppState } from "../AppState";
+import { computed } from "vue";
 export default {
   setup() {
     return {
       user: computed(() => AppState.user),
       async login() {
-        AuthService.loginWithPopup()
+        AuthService.loginWithPopup();
       },
       async logout() {
-        AuthService.logout({ returnTo: window.location.origin })
-      }
-    }
-  }
-}
+        AuthService.logout({ returnTo: window.location.origin });
+      },
+    };
+  },
+};
 </script>
 
 <style scoped>
